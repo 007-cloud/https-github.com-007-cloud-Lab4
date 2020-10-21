@@ -1,0 +1,22 @@
+﻿@model IEnumerable<dotNetLab4.Models.NoteBook>
+@{
+    ViewData["Title"] = "LAB4";
+}
+<h3>NoteBooks</h3>
+<table class="table">
+    <tr>
+        <th>Model</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th></th>
+    </tr>
+    @foreach (var noteBook in Model)
+    {
+        <tr>
+            <td>@noteBook.Name</td>
+            <td>@noteBook.Company</td>
+            <td>@noteBook.Price</td>
+            <td><a href="~/Home/Buy/@noteBook.Id">Buy</a></td>
+        </tr>
+    }
+</table>
